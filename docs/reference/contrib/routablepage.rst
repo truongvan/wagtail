@@ -49,6 +49,7 @@ Here's an example of an ``EventPage`` with three views:
             View function for the current events page
             """
             ...
+            return Page.serve(self, request)
 
         @route(r'^past/$')
         def past_events(self, request):
@@ -56,6 +57,7 @@ Here's an example of an ``EventPage`` with three views:
             View function for the past events page
             """
             ...
+            return Page.serve(self, request)
 
         # Multiple routes!
         @route(r'^year/(\d+)/$')
@@ -65,6 +67,7 @@ Here's an example of an ``EventPage`` with three views:
             View function for the events for year page
             """
             ...
+            return Page.serve(self, request)
 
 Reversing URLs
 ==============
